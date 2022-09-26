@@ -45,6 +45,12 @@
                                                 </button>
                                             </form>
                                         </div>
+                                        <div class="col">
+                                            <a href="{{ route ('dashboard.detail.show', $jabatan->id) }}" class="btn btn-warning">
+                                                <i class="fas fa-solid fa-pen"></i>
+                                                Details
+                                            </a>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>

@@ -56,9 +56,11 @@ class DetailKepegawaian extends Controller
      * @param  \App\Models\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function show(Pegawai $pegawai)
+    public function show(Pegawai $detail)
     {
-        //
+        return view('kepegawaian.detail', [
+            'pegawai' => $detail,
+        ]);
     }
 
     /**
