@@ -47,7 +47,7 @@ class DetailKepegawaian extends Controller
     {
         $pegawai = Pegawai::create($request->validated());
 
-        return redirect()->route('dashboard.pegawai.index');
+        return redirect()->route('dashboard.detail.index');
     }
 
     /**
@@ -67,14 +67,9 @@ class DetailKepegawaian extends Controller
      * @param  \App\Models\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pegawai $pegawai)
+    public function edit(Pegawai $detail)
     {
-        $golongan = Golongan::all();
-
-        return view('kepegawaian.edit', [
-            'pegawai' => $pegawai,
-            'golongan' => $golongan,
-        ]);
+        //
     }
 
     /**
@@ -86,9 +81,7 @@ class DetailKepegawaian extends Controller
      */
     public function update(UpdatePegawaiRequest $request, Pegawai $pegawai)
     {
-        $pegawai->update($request->validated());
-
-        return redirect()->route('dashboard.pegawai.index');
+        //
     }
 
     /**
@@ -97,9 +90,9 @@ class DetailKepegawaian extends Controller
      * @param  \App\Models\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pegawai $pegawai)
+    public function destroy(Pegawai $detail)
     {
-        $pegawai->delete();
+        $detail->delete();
 
         return redirect()->route('dashboard.detail.index');
     }

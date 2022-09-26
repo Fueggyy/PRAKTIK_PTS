@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('tempat_lahir')->nullable();
             $table->string('tanggal_lahir')->nullable();
             $table->string('telpon')->nullable();
-            $table->string('agama');
-            $table->string('status_nikah');
+            $table->string('agama')->nullable();
+            $table->string('status_nikah')->nullable();
             $table->string('alamat')->nullable();
             $table->string('golongan_id')->nullable();
             $table->string('foto')->nullable();

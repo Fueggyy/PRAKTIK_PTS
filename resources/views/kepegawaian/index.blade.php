@@ -11,7 +11,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-            <a href="{{route ('dashboard.pegawai.create') }}" class="btn btn-success mb-4">+ Tambah Data</a>
+            <a href="{{route ('dashboard.detail.create') }}" class="btn btn-success mb-4">+ Tambah Data</a>
             <table id="maintable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
@@ -44,12 +44,6 @@
                                                     Hapus
                                                 </button>
                                             </form>
-                                        </div>
-                                        <div class="col">
-                                            <a href="{{ route ('dashboard.detail.edit', $jabatan->id) }}" class="btn btn-warning">
-                                                <i class="fas fa-solid fa-pen"></i>
-                                                Edit
-                                            </a>
                                         </div>
                                     </div>
                                 </td>
