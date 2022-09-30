@@ -56,10 +56,20 @@ class PegawaiController extends Controller
      * @param  \App\Models\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function show(Pegawai $pegawai)
+    public function show($id)
     {
+
+        $pegawai = Pegawai::find($id);
+
+        $previous = Pegawai::where('id', '<', $pegawai->id)->max('id');
+
+        // get next user id
+        $next = Pegawai::where('id', '>', $pegawai->id)->min('id');
+
         return view('kepegawaian.detail', [
             'pegawai' => $pegawai,
+            "next" => $next,
+            "previous" => $previous,
         ]);
     }
 

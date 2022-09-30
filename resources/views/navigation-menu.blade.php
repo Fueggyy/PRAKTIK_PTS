@@ -22,7 +22,7 @@
                         {{ __('Pegawai') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.detail.index') }}" :active="request()->routeIs('dashboard.detail.index')">
-                        {{ __('Detail') }}
+                        {{ __('kepegawaian') }}
                     </x-jet-nav-link>
                 </div>
             </div>

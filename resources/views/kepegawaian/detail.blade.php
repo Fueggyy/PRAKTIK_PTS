@@ -129,10 +129,14 @@
         </div>
 
     </form>
-</div>
+            <div class="btn-group">
+                <a href="{{ URL::to( 'dashboard/pegawai/' . $previous ) }}" class="btn">«</a>
+                <button class="btn">{{ $pegawai->nama}}</button>
+                <a href="{{ URL::to( 'dashboard/pegawai/' . $next ) }}" class="btn">»</a>
             </div>
         </div>
     </div>
+</div>
 
   
 </x-app-layout>
