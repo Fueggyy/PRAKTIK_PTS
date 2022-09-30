@@ -53,7 +53,6 @@
             <div class="col-md-6">
                 
                 <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
-                    <option value="">-- PILIH JK --</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
@@ -72,9 +71,8 @@
 
             <div class="col-md-6">
                 <select name="status_nikah" id="status" class="form-control">
-                    <option value="">-- PILIH STATUS --</option>
-                    <option value="Menikah">Menikah</option>
                     <option value="Belum Menikah">Belum Menikah</option>
+                    <option value="Menikah">Menikah</option>
                 </select>
 
                 @error ('kode_golongan')
@@ -111,7 +109,6 @@
 
             <div class="col-md-6">
                 <select name="agama" id="agama" class="form-control">
-                    <option value="">-- PILIH AGAMA --</option>
                     <option value="Islam">Islam</option>
                     <option value="Kristen">Kristen</option>
                     <option value="Tionghoa">Tionghoa</option>

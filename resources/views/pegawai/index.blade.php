@@ -12,7 +12,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <a href="{{route ('dashboard.pegawai.create') }}" class="btn btn-success mb-4">+ Tambah Data</a>
-            <table id="maintable" class="table table-striped table-bordered" style="width:100%">
+            <div class="overflow-x-auto">
+            <table id="maintable" class="table w-full">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -65,6 +66,8 @@
                             @endforeach
                         </tbody>
                     </table>
+            </div>
+                </div>
             </div>
         </div>
     </div>

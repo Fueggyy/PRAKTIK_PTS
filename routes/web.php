@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GolonganController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\DetailKepegawaian;
+use App\Http\Livewire\Pegawai\Index;
 
 
 /*
@@ -41,5 +42,6 @@ Route::name('dashboard.')->prefix('dashboard')->group(function () {
     Route::resource('golongan', GolonganController::class);
     Route::resource('pegawai', PegawaiController::class);
     Route::resource('detail', DetailKepegawaian::class);
+    Route::get('pegawais', Index::class)->name('pegawais');
     });
 });
