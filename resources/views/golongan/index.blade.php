@@ -28,23 +28,23 @@
                                 <td>{{$jabatan->kode_golongan}}</td>
                                 <td>{{$jabatan->nama_golongan}}</td>
                                 <td>
-                                    <div class="row">
-                                        <div class="col">
+                                   
+                                        <div class="d-flex justify-content-center">
                                             <form action="{{route ('dashboard.golongan.destroy', $jabatan->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">
+                                                <button  class="btn btn-danger">
                                                     <i class="fas fa-solid fa-trash"></i>
                                                     Hapus
                                                 </button>
                                             </form>
-                                        </div>
-                                        <div class="col">
+                                        
+                                        
                                             <a href="{{ route ('dashboard.golongan.edit', $jabatan->id) }}" class="btn btn-warning">
                                                 <i class="fas fa-solid fa-pen"></i>
                                                 Edit
                                             </a>
-                                        </div>
+                                        
                                     </div>
                                 </td>
                             </tr>

@@ -10,7 +10,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
             <a href="{{route ('dashboard.pegawai.create') }}" class="btn btn-success mb-4">+ Tambah Data</a>
             <table id="maintable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
@@ -36,29 +36,31 @@
                                 <td>{{$jabatan->golongan->kode_golongan}}</td>
                                 <td>{{$jabatan->agama}}</td>
                                 <td>
-                                    <div class="row">
-                                        <div class="col">
+                                   
+                                        <div class="d-flex justify-content-center">
+                                           
                                             <form action="{{route ('dashboard.pegawai.destroy', $jabatan->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">
+                                                <button  class="btn btn-danger">
                                                     <i class="fas fa-solid fa-trash"></i>
                                                     Hapus
                                                 </button>
-                                            </form>
-                                        </div>
-                                        <div class="col">
-                                            <a href="{{ route ('dashboard.pegawai.edit', $jabatan->id) }}" class="btn btn-warning">
+                                            
+                                        
+                                        
+                                            <a href="{{ route ('dashboard.pegawai.edit', $jabatan->id) }}" class="btn btn-success">
                                                 <i class="fas fa-solid fa-pen"></i>
                                                 Edit
                                             </a>
-                                        </div>
-                                        <div class="col">
+                                        
+                                        
+                                        
                                             <a href="{{ route ('dashboard.pegawai.show', $jabatan->id) }}" class="btn btn-warning">
                                                 <i class="fas fa-solid fa-pen"></i>
                                                 Details
                                             </a>
-                                        </div>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

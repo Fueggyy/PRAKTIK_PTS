@@ -34,23 +34,22 @@
                                 <td>{{$jabatan->golongan->kode_golongan}}</td>
                                 <td>{{$jabatan->golongan->nama_golongan}}</td>
                                 <td>
-                                    <div class="row">
-                                        <div class="col">
+                                    
+                                        <div class="d-flex justify-content-center">
                                             <form action="{{route ('dashboard.detail.destroy', $jabatan->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">
+                                                <button class="btn btn-danger">
                                                     <i class="fas fa-solid fa-trash"></i>
                                                     Hapus
                                                 </button>
                                             </form>
-                                        </div>
-                                        <div class="col">
+                                        
                                             <a href="{{ route ('dashboard.detail.show', $jabatan->id) }}" class="btn btn-warning">
                                                 <i class="fas fa-solid fa-pen"></i>
                                                 Details
                                             </a>
-                                        </div>
+                                        
                                     </div>
                                 </td>
                             </tr>

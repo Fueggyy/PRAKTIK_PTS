@@ -5,8 +5,8 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                    <a href="{{ route('dashboard') }}" style="background-color:aqua">
+                       welcome mas akew
                     </a>
                 </div>
 
@@ -21,9 +21,7 @@
                     <x-jet-nav-link href="{{ route('dashboard.pegawai.index') }}" :active="request()->routeIs('dashboard.pegawai.index')">
                         {{ __('Pegawai') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard.detail.index') }}" :active="request()->routeIs('dashboard.detail.index')">
-                        {{ __('Detail') }}
-                    </x-jet-nav-link>
+                    
                 </div>
             </div>
 
